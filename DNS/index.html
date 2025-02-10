@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="component"> 
+            <div class="request_eai hide" id="email_to_eai">
+                <h3>인터페이스 아이디</h3>
+                <input id="request_eai_input">
+                <h3>RFC</h3>
+                <input id="request_rfc_id" readonly>
+                <br>
+                <button id="rfc_copy_btn" class="copy">copy</button>
+                <br>
+                <h3>메일 제목</h3>
+                <textarea class="request_eai_header" id="request_eai_header" readonly>
+                </textarea>
+                <br>
+                <button id="mail_header_btn" class="copy">copy</button>             
+                <br>
+                <h3>메일 내용</h3>
+                <textarea class="request_eai_body" id="request_eai_body" readonly>
+                </textarea>
+                <br>
+                <button id="mail_body_btn" class="copy">copy</button>
+            </div>
+            <div class="fields_classify hide" id="fields_classify">
+                <div class="item">
+                    <h3>비교 필드 목록 : SFDC FIELD</h3>
+                    <textarea class="fields_area" id="before_fields">
+                    </textarea>
+                </div>
+                <div class="item">
+                    <h3>대상 필드 목록 : EXCEL </h3>
+                    <textarea class="fields_area" id="after_fields">
+                    </textarea>
+                </div>
+                <div class="item">
+                    <i id="convert_arrow" class="fa-solid fa-arrow-right" style="font-size: 50px;"></i> 
+                </div>
+                <div class="item">
+                    <h3>겹치지 않는 필드 목록</h3>
+                    <textarea class="fields_area" id="unique_fields"></textarea>
+                </div>
+
+
+            </div>
+            <div class="mock_generator hide" id="mock_generator">
+                <h3>INTERFACE NAME</h3>
+                <input id="interface_name">
+                <br>
+                <br>
+                <h3>RESPONSE</h3>
+                <input id="response_string">
+                <br>
+                <button id="code_generator" class="code_generator"> generator </button>
+                <br>
+                <textarea id="generator_result" readonly>
+                </textarea>
+                <button id="code_cleaner" class="code_generator"> cleaner </button>
+
+            </div>
+        </div>
+
+        <div class="navi">
+            <button id="toolBtn01">1</button>
+            <button id="toolBtn02">2</button>
+            <button id="toolBtn03">3</button>
+            <button id="toolBtn04">4</button>
+        </div>
+    </div>
+    <script>
+        function navigationInit(){
+            document.getElementById('email_to_eai').classList.add('hide')
+            document.getElementById('fields_classify').classList.add('hide')
+            document.getElementById('mock_generator').classList.add('hide')
+        }
+
+        document.getElementById('toolBtn01').addEventListener('click',()=>{
+            navigationInit()
+            document.getElementById('email_to_eai').classList.remove('hide')
+        })
+
+        document.getElementById('toolBtn02').addEventListener('click',()=>{
+            navigationInit()
+            document.getElementById('fields_classify').classList.remove('hide')
+        })
+
+        document.getElementById('toolBtn03').addEventListener('click',()=>{
+            navigationInit()
+            document.getElementById('mock_generator').classList.remove('hide')
+        })
+
+    </script>
+
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="classify_fields.js"></script>
+    <script type="text/javascript" src="mock_generator.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,209 @@
+html{ 
+    margin: 0; /* 기본 마진 제거 */
+    height: 100%; /* 전체 높이를 100%로 설정 */
+    display: flex;
+    justify-content: center; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+}
+
+.wrapper{
+    width: 1860px;
+    height: 2000px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    transition: ease-in-out 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.component{
+    width: 900px;
+    height: 1000px;
+    border-radius: 20px;
+    padding: 2%;
+    border: 2px solid grey;
+    transition: ease-in-out 0.4s;
+}
+
+
+.navi{
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.navi button{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    
+    background-color: white;
+    border-radius: 15px;
+    transition: ease-in-out 0.4s;
+    border: 1px solid black;
+}
+
+
+.navi button:hover{
+    color: white;    
+    background-color: grey;
+    cursor: pointer;
+    border: 0;
+}
+
+.component .request_eai{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.component .request_eai.hide{
+    display: none;
+}
+
+.component .request_eai input{
+    border: none;   
+    outline: none;
+    height: 1.5rem;
+    width: 400px;
+    border-bottom: 2px solid black; 
+    font-size: 1.5rem;
+}
+.component .request_eai button{
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: ease-in-out 0.4s;
+}
+
+.component .request_eai button:hover{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+.request_eai_header{
+    width: 100%;
+    height: 2rem;
+    resize: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.request_eai_body{
+    width: 100%;
+    height: 15rem;
+    resize: none;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.fields_classify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.fields_classify .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.fields_classify.hide{
+    display: none;
+}
+
+.fields_classify textarea{
+    resize: none;
+    width: 200px;
+    height: 800px;
+}
+
+
+.fields_classify .uniqueResult{
+    transition: ease-in-out 0.4s;
+}
+
+.fields_classify .uniqueResult:hover{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+
+.fields_classify i{
+    transition: ease-in-out 0.2s ;
+}
+
+.fields_classify i:hover{
+    cursor: pointer;
+    font-weight: 900;
+    color: red;
+}
+
+/*  mock_generator */
+.mock_generator{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mock_generator.hide{
+    display: none;
+}
+
+.mock_generator input{
+    border: none;   
+    outline: none;
+    height: 1.5rem;
+    width: 400px;
+    border-bottom: 2px solid black; 
+    font-size: 1.5rem;
+}
+
+.mock_generator button{
+    width: 50%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: ease-in-out 0.4s;
+}
+
+.mock_generator button:hover{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+.mock_generator textarea{
+    width: 100%;
+    height: 500px;
+    resize: none;
+    transition: ease-in-out 0.4s;
+    font-size: 1.25rem;
+}
+
+.mock_generator textarea:hover{
+    cursor: pointer;
+    color: white;
+    background-color: grey;
+}
