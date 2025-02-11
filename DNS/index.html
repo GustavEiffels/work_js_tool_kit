@@ -66,6 +66,21 @@
                 <button id="code_cleaner" class="code_generator"> cleaner </button>
 
             </div>
+            <div class="dup_remover hide" id="dup_remover">
+                <div class="dup_item">
+                    <h3>중복 제거 - BEFORE</h3>
+                    <textarea id="dup_before"></textarea>
+                </div>
+                <div class="dup_item">
+                    <i id="removeDup" class="fa-solid fa-arrow-right removeDup" style="font-size: 100px;"></i>
+                    <button id="dup_cleaner"> clear </button>
+                </div>
+                <div class="dup_item">
+                    <h3>중복 제거 - AFTER</h3>
+                    <textarea id="dup_after" class="dup_item_result" readonly></textarea>
+                </div>                
+
+            </div>
         </div>
 
         <div class="navi">
@@ -80,6 +95,7 @@
             document.getElementById('email_to_eai').classList.add('hide')
             document.getElementById('fields_classify').classList.add('hide')
             document.getElementById('mock_generator').classList.add('hide')
+            document.getElementById('dup_remover').classList.add('hide')
         }
 
         document.getElementById('toolBtn01').addEventListener('click',()=>{
@@ -97,11 +113,17 @@
             document.getElementById('mock_generator').classList.remove('hide')
         })
 
+        document.getElementById('toolBtn04').addEventListener('click',()=>{
+            navigationInit()
+            document.getElementById('dup_remover').classList.remove('hide')
+        })
+
     </script>
 
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="classify_fields.js"></script>
     <script type="text/javascript" src="mock_generator.js"></script>
+    <script type="text/javascript" src="dupRemover.js"></script>
 </body>
 </html>
 
