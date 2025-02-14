@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="wrapper">
+    <blockquote class="custom_block"><h3 data-ke-size="size23">들어가기 전에</h3>Notion 에 정리했던 Cache 에 대해서 다시 정리해보려고 한다.
+    </blockquote><br>
+
+
+    <p class="custom_title">Cache란 무엇인가?</p>
+
+
+<blockquote class="custom_block"><h2>Cache</h2>자주 사용하는 데이터를 빠르게
+불러오기 위해서 사용하는 임시 저장소이다.
+
+어플리케이션 단에서 정의한다면
+<span class="highlight_STRONG">자주 사용하는 데이터를 메모리에 저장하여 빠르게 제공하는 기술 이다.</span>
+</blockquote>
+<br>
+
+<blockquote class="custom_block"><h2>Cache의 장점</h2><h3>1. 데이터를 빠르게 가져올 수 있다.</h3>    Cache를 사용하는 이유는 <span class="highlight_STRONG">자주 사용하는 데이터를 빠르게 가져오기 위함이다.</span> 
+    일반적으로 데이터베이스(DB)는 데이터를 하드디스크(HDD)나 SSD에 저장하며,
+    디스크에서 데이터를 읽어오는 것은 메모리(RAM)에서 가져오는 것보다 속도가 느리다.
+
+    따라서, 자주 조회하는 데이터를 메모리에 캐시를 사용하면
+   <span class="highlight_STRONG">I/O를 줄이고 훨씬 빠르게 데이터를 가져올 수 있습니다.</span>
+   <h3>2. 안정적인 네트워크를 구축 할 수 있다.</h3>   Web Cache 등을 사용하면 <span class="highlight_STRONG">자주 사용하는 데이터를 로컬에 저장</span> 하기 때문에
+   <span class="highlight_STRONG">서버 요청 횟수를 줄이고, 네트워크 부하를 감소</span> 시킬 수 있습니다.
+   그 결과, <span class="highlight_STRONG">서버는 과부하 없이 안정적인 트래픽을 유지할 수 있습니다.</span>   
+</blockquote><br>
+
+
+</body>
+<style>
+    .highlight_title{
+        font-weight: 900;
+        transition: ease-in-out 0.4s;
+        font-size: 1.2rem;
+        cursor: default;
+    }
+
+    .highlight_green{
+        font-weight: 500;
+        transition: ease-in-out 0.4s;
+        cursor: default;
+    }
+
+    .highlight_STRONG{
+        font-weight: 900;
+        font-size: 1.1rem;
+        transition: ease-in-out 0.4s;
+        cursor: default;
+    }
+
+
+    .highlight_green:hover{
+        color: green;
+    }
+
+    .custom_title{
+        display: inline-block; border-radius: 15px 15px 15px 0; border: 3px solid #474747; padding: 0.5em 1em 0.5em 0.8em; color: #474747; font-weight: bold;
+        cursor: default;
+        user-select: none;
+    }
+
+    .custom_desc{
+      background-color: rgba(255, 255, 255, 0.7); /* 흰색에 70% 투명도 */
+      border-radius: 10px; /* 10px 라운드 */
+      border: 4px solid #474747; /* 4px 테두리 */
+      width: 100%; /* 90% 너비 */
+      padding: 1em; /* 내부 여백 */
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* 기본 box-shadow */
+      transition: box-shadow 0.4s ease-in-out; /* hover 시 box-shadow 트랜지션 */
+      word-wrap: break-word; /* 자동 줄바꿈 */
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        cursor: default;
+    }
+    
+    .custom_desc:hover{
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* hover 시 box-shadow가 커짐 */
+    }
+    
+    .graybox{
+        background-color: gray; /* 흰색에 70% 투명도 */
+      border-radius: 10px; /* 10px 라운드 */
+      border: 4px solid gray; /* 4px 테두리 */
+      width: auto; /* 90% 너비 */
+      padding: 1em; /* 내부 여백 */
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* 기본 box-shadow */
+      transition: box-shadow 0.4s ease-in-out; /* hover 시 box-shadow 트랜지션 */
+      white-space: pre-wrap;
+        color: white;
+        font-size: 0.75rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .graybox:hover{
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* hover 시 box-shadow가 커짐 */
+    }
+    
+    .custom_block{
+        background-color: white; /* 흰색에 70% 투명도 */
+      border-radius: 10px; /* 10px 라운드 */
+      border: 4px solid white; /* 4px 테두리 */
+      width: auto; /* 90% 너비 */
+      padding: 1em; /* 내부 여백 */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 기본 box-shadow */
+      transition: box-shadow 0.4s ease-in-out; /* hover 시 box-shadow 트랜지션 */
+      white-space: pre-wrap;
+        color: gray;
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        cursor: default;
+    }
+
+    .custom_block:hover{
+        background-color: white; /* 흰색에 70% 투명도 */
+        border-radius: 10px; /* 10px 라운드 */
+        border: 4px solid white; /* 4px 테두리 */
+        width: auto; /* 90% 너비 */
+        padding: 1em; /* 내부 여백 */
+        box-shadow: 0 1px 10px rgba(125, 125, 125, 0.8); /* 기본 box-shadow */
+        transition: box-shadow 0.4s ease-in-out; /* hover 시 box-shadow 트랜지션 */
+        white-space: pre-wrap;
+        color: rgba(50, 50, 50, 0.8);
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        cursor: default;
+    }    
+    
+    
+</style>
+</html>
